@@ -3,4 +3,28 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  //-message
+  div#class1.class2 this is class
+  div.class1.class2 
+      i is class1
+      i is class2
+
+  //-baidu
+  a.class1(href='https://www.baidu.com/', target="_blank") baidu.com
+
+  //-condition
+  - var name='gaos'
+   if(name==='gao')
+     p name is gao
+   else
+     p name is jie
+
+   //-list
+   - var list=['gao','jie'];
+      ul 
+        each value in list
+          li=value
+
+block scripts
   script $(document).ready(function(){console.log('demo');});
